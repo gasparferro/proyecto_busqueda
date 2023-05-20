@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Resultados de la búsqueda</h1>
+  
+  {% if hobbits %}
+    <h2>Hobbits</h2>
+    <ul>
+      {% for hobbit in hobbits %}
+        <li>{{ hobbit }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  {% if elfos %}
+    <h2>Elfos</h2>
+    <ul>
+      {% for elfo in elfos %}
+        <li>{{ elfo }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  {% if enanos %}
+    <h2>Enanos</h2>
+    <ul>
+      {% for enano in enanos %}
+        <li>{{ enano }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+  {% if orcos %}
+    <h2>Orcos</h2>
+    <ul>
+      {% for orco in orcos %}
+        <li>{{ orco }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  
+{% endblock %}
